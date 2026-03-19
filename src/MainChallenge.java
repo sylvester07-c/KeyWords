@@ -13,6 +13,8 @@ public class MainChallenge {
             System.out.println("Your final Score is, " + finalScore);
         }
 
+        score = 10000;
+
         boolean gameOver1 = true;
         int score1 = 10000;
         int levelCompleted1 = 8;
