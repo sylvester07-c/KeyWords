@@ -1,6 +1,26 @@
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MainChallenge {
+
+    public class LeapYear {
+        // write code here
+        public static boolean isLeapYear(int year){
+
+            if (year <= 1 || year >= 9999){
+                return false;
+            }
+            else if (year % 4 == 0 && year % 100 != 0){
+                return true;
+
+            }else if (year % 100 == 0 && year % 400 == 0){
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+    }
+
     public static void displayHighScorePosition(String playersName, int position){
         System.out.println(playersName + "managed to get into position " + position + " on the high score list");
     }
@@ -33,10 +53,8 @@ public class MainChallenge {
     }
     public static void main(String[] args) {
 
-
-//        System.out.print("Final score is: " + calculateScore(true, 800, 5, 100));
-//
-//        calculateScore(true, 10000, 8,200);
+        double value = 12.1111123456;
+        System.out.println(Math.round(value));
         int highScorePosition = calculateHighScorePosition(1500);
         displayHighScorePosition("Praise", highScorePosition);
         highScorePosition = calculateHighScorePosition(1000);
