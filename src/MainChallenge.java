@@ -2,6 +2,23 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class MainChallenge {
 
+    public static boolean hasTeen(int val1, int val2, int val3){
+        if((val1 >= 13 && val1 <= 19) || (val2 >= 13 && val2 <= 19) || (val3 >= 13 && val3 <= 19)){
+            return true;
+        } else {
+            return false;
+        }
+
+    }
+
+    public static boolean isTeen(int age){
+        if(age >= 13 && age <= 19){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
     public class LeapYear {
         // write code here
         public static boolean isLeapYear(int year){
