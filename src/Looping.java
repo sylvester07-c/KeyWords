@@ -28,56 +28,70 @@ public class Looping {
                 return false;
             }
         }
-        return true;
+        return false;
     }
 
     public static void main(String[] args) {
-        calculateInterest(1000 );
-        System.out.println("8 is " + (isPrime(8)? "" : "NOT") + " a prime number");
+//        calculateInterest(1000 );
+//        System.out.println("8 is " + (isPrime(8)? "" : "NOT") + " a prime number");
+//
+//        int counter = 0;
+//        for(int i = 100; i <= 150; i++){
+//
+//            boolean checker = isPrime(i);
+//            if(checker == true){
+//                System.out.println(i);
+//                counter += 1;
+//            }if (counter == 3){
+//                break;
+//        }
+//        }
+//
+//        int count = 0;
+//        int sum = 0;
+//        for(int i = 1; i <= 1000; i++){
+//
+//            if(i % 3 == 0 && i % 5 == 0){
+//                count++;
+//                sum += i;
+//                System.out.println(i);
+//
+//            }if(count == 5){
+//                break;
+//            }
+//
+//        }
+//        System.out.println(sum);
+//
+//
+//        int ji = 0;
+//        while( ji <= 5 ){
+//            System.out.println(ji);
+//            ji++;
+//        }
+//        return true;
 
-        int counter = 0;
-        for(int i = 100; i <= 150; i++){
 
-            boolean checker = isPrime(i);
-            if(checker == true){
-                System.out.println(i);
-                counter += 1;
-            }if (counter == 3){
-                break;
-            }
-        }
-
-        int count = 0;
-        int sum = 0;
-        for(int i = 1; i <= 1000; i++){
-
-            if(i % 3 == 0 && i % 5 == 0){
-                count++;
-                sum += i;
-                System.out.println(i);
-
-            }if(count == 5){
-                break;
-            }
-
-        }
-        System.out.println(sum);
-
-
-        int ji = 0;
-        while( ji <= 5 ){
-            System.out.println(ji);
-            ji++;
-        }
-
-        int startValue = 5;
+        int startValue = 4;
         int endValue = 20;
+        int totalEven = 0;
+        int totalOdd = 0;
         while(startValue <= endValue){
-            if(isEvenNumber(startValue)){
-                System.out.println(startValue);
-            }
             startValue++;
+            if(isEvenNumber(startValue)){
+                System.out.println("Even number is " + startValue);
+                totalEven++;
+
+            }else{
+
+                totalOdd++;
+            }
+            if(totalEven == 5){
+                break;
+            }
         }
+        System.out.println("Total number of even number is: "+ totalEven);
+        System.out.println("Total number of odd number is: " + totalOdd);
 
     }
 }
