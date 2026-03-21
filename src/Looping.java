@@ -1,5 +1,16 @@
 public class Looping {
 
+    public static boolean isEvenNumber(int number){
+        if(number % 2 == 0){
+            return true;
+        }
+        return false;
+    }
+
+
+
+
+
     public static void calculateInterest(int amount){
         for(double rate = 7.5; rate <= 10; rate+=0.25){
             double interest = amount * (rate/100);
@@ -51,6 +62,22 @@ public class Looping {
 
         }
         System.out.println(sum);
+
+
+        int ji = 0;
+        while( ji <= 5 ){
+            System.out.println(ji);
+            ji++;
+        }
+
+        int startValue = 5;
+        int endValue = 20;
+        while(startValue <= endValue){
+            if(isEvenNumber(startValue)){
+                System.out.println(startValue);
+            }
+            startValue++;
+        }
 
     }
 }
