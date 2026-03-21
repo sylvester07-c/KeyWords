@@ -1,4 +1,19 @@
 public class Looping {
+    public static int sumDigits(int number){
+        if (number < 0) {
+            return -1;
+        }
+        int n = 0;
+        while (number > 9) {
+            n += number % 10;
+            number = number / 10;
+
+        }
+        n += number;
+
+        return n;
+
+    }
 
     public static boolean isEvenNumber(int number){
         if(number % 2 == 0){
@@ -7,18 +22,13 @@ public class Looping {
         return false;
     }
 
-
-
-
-
     public static void calculateInterest(int amount){
         for(double rate = 7.5; rate <= 10; rate+=0.25){
             double interest = amount * (rate/100);
             System.out.println("Interest: " + interest);
-
         }
-
     }
+
     public static boolean isPrime(int wholeNumber){
         if(wholeNumber <= 2){
             return wholeNumber == 2;
@@ -91,7 +101,7 @@ public class Looping {
             }
         }
         System.out.println("Total number of even number is: "+ totalEven);
-        System.out.println("Total number of odd number is: " + totalOdd);
+        System.out.println(sumDigits(1234567));
 
     }
 }
