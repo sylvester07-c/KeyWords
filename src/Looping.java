@@ -1,4 +1,25 @@
 public class Looping {
+
+    // write code here
+    public static boolean isPalindrome(int number){
+        int reverse = 0;
+        int original = number;
+
+        while(number != 0 || number > 0){
+            int lastNumber = number % 10;
+            reverse = reverse * 10;
+            reverse += lastNumber;
+            number = number / 10;
+            if(original == reverse){
+                return true;
+            }
+
+        }
+
+        return false;
+    }
+
+
     public static int sumDigits(int number){
         if (number < 0) {
             return -1;
@@ -16,10 +37,7 @@ public class Looping {
     }
 
     public static boolean isEvenNumber(int number){
-        if(number % 2 == 0){
-            return true;
-        }
-        return false;
+        return number % 2 == 0;
     }
 
     public static void calculateInterest(int amount){
@@ -86,6 +104,7 @@ public class Looping {
         int endValue = 20;
         int totalEven = 0;
         int totalOdd = 0;
+
         while(startValue <= endValue){
             startValue++;
             if(isEvenNumber(startValue)){
