@@ -121,6 +121,8 @@ public class Looping {
         }
         System.out.println("Total number of even number is: "+ totalEven);
         System.out.println(sumDigits(1234567));
+        System.out.println(2/3);
+
 
     }
 }
