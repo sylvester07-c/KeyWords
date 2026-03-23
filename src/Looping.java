@@ -1,16 +1,54 @@
 public class Looping {
+    // write code here
+    public class SharedDigit {
+        // write code here
+        public static boolean hasSharedDigit(int number1, int number2){
+            if(number1 >= 10 && number1 <= 99 && number2 >= 10 && number2 <= 99){
+
+                int rmd1  = number1 %  10;
+                int lmd1 = number1 / 10;
+                int rmd2 = number2 % 10;
+                int lmd2= number2 / 10;
+                if(rmd1 == rmd2 || lmd1 == lmd2 || lmd2 == rmd1 || lmd1 == rmd2){
+                    return true;
+                }
+
+            }
+            return false;
+
+        }
+    }
+
 
     // write code here
-    public static boolean isPalindrome(int number){
+    public static int sumFirstAndLastDigit(int number) {
+        if (number < 0) {
+            return -1;
+        }
+        int sum = 0;
+        int lastNumber = number % 10;
+        while (number >= 10) {
+
+            number = number / 10;
+
+//                    return number;
+        }
+
+
+        return number + lastNumber;
+    }
+
+
+    public static boolean isPalindrome(int number) {
         int reverse = 0;
         int original = number;
 
-        while(number != 0 || number > 0){
+        while (number != 0 || number > 0) {
             int lastNumber = number % 10;
             reverse = reverse * 10;
             reverse += lastNumber;
             number = number / 10;
-            if(original == reverse){
+            if (original == reverse) {
                 return true;
             }
 
@@ -20,7 +58,7 @@ public class Looping {
     }
 
 
-    public static int sumDigits(int number){
+    public static int sumDigits(int number) {
         if (number < 0) {
             return -1;
         }
@@ -34,30 +72,32 @@ public class Looping {
 
         return n;
 
-    }
 
-    public static boolean isEvenNumber(int number){
+    }
+    public static boolean isEvenNumber(int number) {
         return number % 2 == 0;
     }
 
-    public static void calculateInterest(int amount){
-        for(double rate = 7.5; rate <= 10; rate+=0.25){
-            double interest = amount * (rate/100);
+    public static void calculateInterest(int amount) {
+        for (double rate = 7.5; rate <= 10; rate += 0.25) {
+            double interest = amount * (rate / 100);
             System.out.println("Interest: " + interest);
         }
     }
 
-    public static boolean isPrime(int wholeNumber){
-        if(wholeNumber <= 2){
+    public static boolean isPrime(int wholeNumber) {
+        if (wholeNumber <= 2) {
             return wholeNumber == 2;
         }
-        for(int i = 2; i < wholeNumber; i++){
-            if(wholeNumber % i == 0){
+        for (int i = 2; i < wholeNumber; i++) {
+            if (wholeNumber % i == 0) {
                 return false;
             }
         }
         return false;
     }
+
+
 
     public static void main(String[] args) {
 //        calculateInterest(1000 );
@@ -121,7 +161,7 @@ public class Looping {
         }
         System.out.println("Total number of even number is: "+ totalEven);
         System.out.println(sumDigits(1234567));
-        System.out.println(2/35);
+        System.out.println(sumFirstAndLastDigit(121));
 
 
     }
